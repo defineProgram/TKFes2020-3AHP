@@ -89,7 +89,7 @@ nav.globalMenuSp {
     top  : 0;
     left : 0;
     color: #000;
-    background: #ffffffe1;
+    background: #ffffff;
     height: 100%;
     width: 0px;
     transition: .2s ease-in-out;
@@ -103,7 +103,7 @@ nav.globalMenuSp {
 }
 
 nav.globalMenuSp ul{
-    margin: 70px auto;
+    margin: 20px auto;
     padding: 0;
     width: 100%;
 }
@@ -115,14 +115,14 @@ nav.globalMenuSp ul li {
     transition: 0.4s all;
     font-size: 1.3em;
     font-family: 'Roboto', sans-serif;
-    border-top: 2px solid #7a7a76c4;
+    border-top: 1px solid #b8b8b8;
 }
 nav.globalMenuSp ul li:last-child{
     padding-bottom: 0;
-    border-bottom: 2px solid #7a7a76c4;
+    border-bottom: 1px solid #b8b8b8;
 }
 nav.globalMenuSp ul li:hover{
-    background: #cecdcbc4;
+    background: #ececec;
 }
 nav.globalMenuSp ul li a {
     display: block;
@@ -161,17 +161,22 @@ nav.globalMenuSp.inactive{
 nav.globalMenuSp.inactive ul{
     display: none;
 }
+nav.globalMenuSp.inactive .decotitle{
+    display: none;
+}
+nav.globalMenuSp.inactive .decosubtitle{
+    display: none;
+}
 .decotitle{
     margin-top: 60px;
-    margin-left: 20px;
     padding: 0;
     width: 100%;
-    font-size: 1.5em;
-    font-family: 'Ubuntu Mono';
+    font-size: 1.3em;
+    text-align: center;
 }
 .decosubtitle{
-    font-family: 'Ubuntu Mono';
     width: 100%;
-    margin: 10px 20px;
-    color: #baabbb;
+    margin-top: 10px;
+    color: #686468;
+    text-align: center;
 }
