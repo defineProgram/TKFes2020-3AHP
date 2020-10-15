@@ -16,15 +16,21 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
     root: {
-        width: 500,
-        margin: 30,
+        width: '30vw',
+        margin: '15px 15px',
         ['@media (max-width:768px)']: {
-            marginLeft: 5,
-            marginRight: 5
+            width : '70vw',
+            margin : '10px 0px',
         },
+        ['@media (max-width:425px)']: {
+            width : '90vw',
+            margin : '10px 0px',
+        }
     },
     media: {
-        height: 300,
+        height: '20vw',
+        minHeight : 150,
+        maxHeight : 300,
     },
 });
 
@@ -35,21 +41,21 @@ function Home() {
         <div>
             <Header name="Home" />
             <div className="home-content">
-                <Paper elevation={2} className="welcome">
-                    <img src="/header.png" className="headerimage" />
-                </Paper>
+                <div className="welcome">
+                    <img src="/assets/thumbnail.webp" className="headerimage" alt="Header Image" />
+                </div>
                 <Paper elevation={1} className="news">
                     <div className="content-title">News</div>
                     <div className="news-article">
-                        <div className="article-date">2020/10/03</div>
+                        <div className="article-date">2020/10/09</div>
                         <div className="article-body">
-                            仮文章1
+                            ダミー 1
                         </div>
                     </div>
                     <div className="news-article">
-                        <div className="article-date">2020/10/05</div>
+                        <div className="article-date">2020/10/10</div>
                         <div className="article-body">
-                            仮文章2
+                            ダミー 2
                         </div>
                     </div>
                 </Paper>
@@ -62,14 +68,13 @@ function Home() {
                         </div>
                     </div>
                 </Paper>
-                <Paper elevation={1} className="contents">
-                    <div className="content-title">Contents</div>
+                <div className="contents">
                     <div className="content-articles">
                         <Card className={classes.root} onClick={() => { document.location.href = "/About" }}>
                             <CardActionArea>
                                 <CardMedia
                                     className={classes.media}
-                                    image="/logo.jpg"
+                                    image="/assets/logo.jpg"
                                 />
                                 <CardContent>
                                     <Typography gutterBottom variant="h5" component="h2">
@@ -85,7 +90,7 @@ function Home() {
                             <CardActionArea>
                                 <CardMedia
                                     className={classes.media}
-                                    image="/virus_corona.png"
+                                    image="/assets/virus_corona.png"
                                 />
                                 <CardContent>
                                     <Typography gutterBottom variant="h5" component="h2">
@@ -101,7 +106,7 @@ function Home() {
                             <CardActionArea>
                                 <CardMedia
                                     className={classes.media}
-                                    image="/bessou_log_house.png"
+                                    image="/assets/bessou_log_house.png"
                                 />
                                 <CardContent>
                                     <Typography gutterBottom variant="h5" component="h2">
@@ -117,7 +122,7 @@ function Home() {
                             <CardActionArea>
                                 <CardMedia
                                     className={classes.media}
-                                    image="/kandou_movie_eigakan.png"
+                                    image="/assets/kandou_movie_eigakan.png"
                                 />
                                 <CardContent>
                                     <Typography gutterBottom variant="h5" component="h2">
@@ -130,7 +135,7 @@ function Home() {
                             </CardActionArea>
                         </Card>
                     </div>
-                </Paper>
+                </div>
                 <Paper elevation={1} className="links">
                     <div className="content-title">Links</div>
                     <div className="news-article">

@@ -11,7 +11,7 @@ a{
     text-decoration: none;
     position: relative;
     display: inline-block;
-    color: #31aae2;
+    color: #3160e2;
 }
 
 .link::after {
@@ -21,7 +21,7 @@ a{
 	content: '';
 	width: 0;
 	height: 1px;
-    background-color: #31aae2;
+    background-color: #3160e2;
     transition: .3s;
     transform: translateX(-50%);
 }

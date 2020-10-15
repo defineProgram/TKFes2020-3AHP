@@ -4,24 +4,25 @@
     overflow: hidden;
 }
 .welcome{
-    width: 70vw;
-    height: 30vw;
+    width: 100vw;
+    height: 37vw;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 100px;
+    margin-top: 80px;
     overflow: hidden;
     padding: 0px;
 }
 .headerimage{
     width: 100%;
     height: 100%;
+    filter: brightness(90%);
 }
 
 .news{
-    width: 70vw;
+    width: 90vw;
     min-height: 200px;
     height: auto;
-    margin: 10px auto;
+    margin: 20px auto;
     overflow: hidden;
     padding: 20px;
     overflow: hidden;
@@ -36,24 +37,24 @@
     border-bottom: 1px dashed #baabbb;
 }
 .article-date{
-    color: #7c7e7b;
+    color: #4e4e4e;
 }
 
 .content-title{
-    border-left: 6px solid #000000;
-    font-size: 1.5em;
-    padding-left: 10px;
+    border-left: 4px solid #000000;
+    font-size: 1.8em;
+    padding-left: 15px;
     margin: 15px 15px;
     margin-bottom: 20px;
+    font-family: 'Cutive Mono', monospace;
 }
 
 .contents{
-    width: 70vw;
-    min-height: 600px;
+    width: 90vw;
     height: auto;
     margin: auto auto;
     overflow: hidden;
-    padding: 15px;
+    padding: 0px;
     overflow: hidden;
     box-sizing: border-box;
 }
@@ -62,10 +63,9 @@
     flex-wrap: wrap;
     justify-content: center;
     overflow: hidden;
-    padding: 5px;
 }
 .links{
-    width: 70vw;
+    width: 90vw;
     min-height: 200px;
     height: auto;
     margin: 10px auto;
@@ -74,17 +74,14 @@
     overflow: hidden;
     box-sizing: border-box;
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 425px) {
 	.contents {
-        width: 90vw;
-    }
-    .welcome{
-        width: 90vw;
+        width: 70vw;
     }
     .news{
-        width: 90vw;
+        width: 70vw;
     }
     .links{
-        width: 90vw;
+        width: 70vw;
     }
 }
