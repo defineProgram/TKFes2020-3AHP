@@ -19,18 +19,18 @@ const useStyles = makeStyles({
         width: '30vw',
         margin: '15px 15px',
         ['@media (max-width:768px)']: {
-            width : '70vw',
-            margin : '10px 0px',
+            width: '70vw',
+            margin: '10px 0px',
         },
         ['@media (max-width:425px)']: {
-            width : '90vw',
-            margin : '10px 0px',
+            width: '90vw',
+            margin: '10px 0px',
         }
     },
     media: {
         height: '20vw',
-        minHeight : 150,
-        maxHeight : 300,
+        minHeight: 150,
+        maxHeight: 300,
     },
 });
 
@@ -70,70 +70,78 @@ function Home() {
                 </Paper>
                 <div className="contents">
                     <div className="content-articles">
-                        <Card className={classes.root} onClick={() => { document.location.href = "/About" }}>
-                            <CardActionArea>
-                                <CardMedia
-                                    className={classes.media}
-                                    image="/assets/logo.jpg"
-                                />
-                                <CardContent>
-                                    <Typography gutterBottom variant="h5" component="h2">
-                                        About
+                        <a href="/About">
+                            <Card className={classes.root}>
+                                <CardActionArea>
+                                    <CardMedia
+                                        className={classes.media}
+                                        image="/assets/logo.jpg"
+                                    />
+                                    <CardContent>
+                                        <Typography gutterBottom variant="h5" component="h2">
+                                            About
                                     </Typography>
-                                    <Typography variant="body2" color="textSecondary" component="p">
-                                        当デコ、「3年A組　ー今から皆さんは観客ですー　」の紹介ページです。
+                                        <Typography variant="body2" color="textSecondary" component="p">
+                                            当デコ、「3年A組　ー今から皆さんは観客ですー　」の紹介ページです。
                                     </Typography>
-                                </CardContent>
-                            </CardActionArea>
-                        </Card>
-                        <Card className={classes.root} onClick={() => { document.location.href = "/Story1" }}>
-                            <CardActionArea>
-                                <CardMedia
-                                    className={classes.media}
-                                    image="/assets/virus_corona.png"
-                                />
-                                <CardContent>
-                                    <Typography gutterBottom variant="h5" component="h2">
-                                        パンデミックな彼女
+                                    </CardContent>
+                                </CardActionArea>
+                            </Card>
+                        </a>
+                        <a href="/Story1">
+                            <Card className={classes.root}>
+                                <CardActionArea>
+                                    <CardMedia
+                                        className={classes.media}
+                                        image="/assets/virus_corona.png"
+                                    />
+                                    <CardContent>
+                                        <Typography gutterBottom variant="h5" component="h2">
+                                            パンデミックな彼女
                                     </Typography>
-                                    <Typography variant="body2" color="textSecondary" component="p">
-                                        映画「パンデミックな彼女」の紹介・上映ページです。
+                                        <Typography variant="body2" color="textSecondary" component="p">
+                                            映画「パンデミックな彼女」の紹介・上映ページです。
                                     </Typography>
-                                </CardContent>
-                            </CardActionArea>
-                        </Card>
-                        <Card className={classes.root} onClick={() => { document.location.href = "/Story2" }}>
-                            <CardActionArea>
-                                <CardMedia
-                                    className={classes.media}
-                                    image="/assets/bessou_log_house.png"
-                                />
-                                <CardContent>
-                                    <Typography gutterBottom variant="h5" component="h2">
-                                        15年越しの絆
+                                    </CardContent>
+                                </CardActionArea>
+                            </Card>
+                        </a>
+                        <a href="/Story2">
+                            <Card className={classes.root}>
+                                <CardActionArea>
+                                    <CardMedia
+                                        className={classes.media}
+                                        image="/assets/bessou_log_house.png"
+                                    />
+                                    <CardContent>
+                                        <Typography gutterBottom variant="h5" component="h2">
+                                            15年越しの絆
                                     </Typography>
-                                    <Typography variant="body2" color="textSecondary" component="p">
-                                        映画「15年越しの絆」の上映ページです。
+                                        <Typography variant="body2" color="textSecondary" component="p">
+                                            映画「15年越しの絆」の上映ページです。
                                     </Typography>
-                                </CardContent>
-                            </CardActionArea>
-                        </Card>
-                        <Card className={classes.root} onClick={() => { document.location.href = "/TimeTable" }}>
-                            <CardActionArea>
-                                <CardMedia
-                                    className={classes.media}
-                                    image="/assets/kandou_movie_eigakan.png"
-                                />
-                                <CardContent>
-                                    <Typography gutterBottom variant="h5" component="h2">
-                                        タイムテーブル
+                                    </CardContent>
+                                </CardActionArea>
+                            </Card>
+                        </a>
+                        <a href="/TimeTable">
+                            <Card className={classes.root}>
+                                <CardActionArea>
+                                    <CardMedia
+                                        className={classes.media}
+                                        image="/assets/kandou_movie_eigakan.png"
+                                    />
+                                    <CardContent>
+                                        <Typography gutterBottom variant="h5" component="h2">
+                                            タイムテーブル
                                     </Typography>
-                                    <Typography variant="body2" color="textSecondary" component="p">
-                                        学校内で放映される映画のタイムテーブルです。
+                                        <Typography variant="body2" color="textSecondary" component="p">
+                                            学校内で放映される映画のタイムテーブルです。
                                     </Typography>
-                                </CardContent>
-                            </CardActionArea>
-                        </Card>
+                                    </CardContent>
+                                </CardActionArea>
+                            </Card>
+                        </a>
                     </div>
                 </div>
                 <Paper elevation={1} className="links">
