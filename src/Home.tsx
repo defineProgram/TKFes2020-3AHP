@@ -94,10 +94,10 @@ function Home() {
                                 />
                                 <CardContent>
                                     <Typography gutterBottom variant="h5" component="h2">
-                                        「タイトル未定1」
+                                        パンデミックな彼女
                                     </Typography>
                                     <Typography variant="body2" color="textSecondary" component="p">
-                                        映画「タイトル未定1」の上映ページです。
+                                        映画「パンデミックな彼女」の紹介・上映ページです。
                                     </Typography>
                                 </CardContent>
                             </CardActionArea>
@@ -110,10 +110,10 @@ function Home() {
                                 />
                                 <CardContent>
                                     <Typography gutterBottom variant="h5" component="h2">
-                                        「タイトル未定2」
+                                        15年越しの絆
                                     </Typography>
                                     <Typography variant="body2" color="textSecondary" component="p">
-                                        映画「タイトル未定2」の上映ページです。
+                                        映画「15年越しの絆」の上映ページです。
                                     </Typography>
                                 </CardContent>
                             </CardActionArea>
