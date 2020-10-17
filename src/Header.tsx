@@ -28,7 +28,7 @@ function Header(props: Props) {
 		}
 	});
 	const onResize = (() => {
-		if (window.innerWidth >= 1024) setisOpen(true);
+		if (window.innerWidth >= 1024) {setisHidden(false);setisOpen(true);}
 		if (nowWidth >= 1024 && window.innerWidth < 1024) setisOpen(false);
 		setnowWidth(window.innerWidth);
 	});

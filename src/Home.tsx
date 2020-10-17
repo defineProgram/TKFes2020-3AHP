@@ -16,14 +16,10 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
     root: {
-        width: '21vw',
+        width: 'calc((100vw - 350px) * 0.3)',
         margin: '15px 15px',
         height: 'auto',
         ['@media (max-width:1024px)']: {
-            width: '50vw',
-            margin: '10px 0px',
-        },
-        ['@media (max-width:768px)']: {
             width: '40vw',
             margin: '10px 10px',
         },
