@@ -1,15 +1,25 @@
 .about-content{
+    width: 100vw;
     padding-bottom: 150px;
     z-index: 500;
     overflow: hidden;
 }
-.coming{
-    width: 90vw;
-    height: 100px;
-    margin-left: auto;
-    margin-right: auto;
+@media screen and (min-width: 1024px){
+    .about-content{
+        width: calc(100vw - 300px);
+        transform: translateX(300px);
+    }
+}
+.explain:first-child{
     margin-top: 100px;
-    overflow: hidden;
-    padding: 0px;
-    text-align: center;
+}
+@media screen and (min-width: 1024px) {
+	.explain{
+        width: 70%;
+    }
+}
+.explain-contents{
+    margin: 5px 5px;
+    padding: 10px 10px;
+    font-family: 'Roboto' , sans-serif;
 }

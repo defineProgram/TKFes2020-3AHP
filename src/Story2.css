@@ -1,15 +1,12 @@
-.about-content{
+.story2-content{
+    width: 100vw;
     padding-bottom: 150px;
     z-index: 500;
     overflow: hidden;
 }
-.coming{
-    width: 90vw;
-    height: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 100px;
-    overflow: hidden;
-    padding: 0px;
-    text-align: center;
+@media screen and (min-width: 1024px){
+    .story2-content{
+        width: calc(100vw - 300px);
+        transform: translateX(300px);
+    }
 }

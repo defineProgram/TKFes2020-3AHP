@@ -15,7 +15,7 @@ header.hidden{
 .title{
     font-family: 'Roboto', sans-serif;
     color: #fff;
-    font-size: 1.5em;
+    font-size: 1.3em;
     padding-top: 20px;
     text-align: left;
     position: fixed;
@@ -25,7 +25,7 @@ header.hidden{
     box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12);
 }
 .title span{
-    margin-left: 100px;
+    margin-left: 70px;
 }
 
 .humburger{
@@ -71,15 +71,11 @@ header.hidden{
 .humburger.active span:nth-child(1){
     top:16px;
     left:6px;
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
     transform: rotate(-45deg);
 }
 .humburger.active span:nth-child(2),
 .humburger.active span:nth-child(3){
     top:16px;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
     transform: rotate(45deg);
 }
 
@@ -91,9 +87,12 @@ nav.globalMenuSp {
     color: #000;
     background: #ffffff;
     height: 100%;
-    width: 0px;
+    width: 300px;
+    max-width: 100vw;
     transition: .3s ease-in-out;
     overflow-x: hidden;
+    transform: translateX(-100%);
+    box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12);
 }
 
 @media screen and (max-height: 700px) {
@@ -114,7 +113,7 @@ nav.globalMenuSp ul li {
     text-align: center;
     transition: 0.4s all;
     font-size: 1.3em;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Noto Serif JP', serif;
     border-top: 1px solid #b8b8b8;
 }
 nav.globalMenuSp ul li:last-child{
@@ -131,9 +130,8 @@ nav.globalMenuSp ul li a {
     text-decoration: none;
 }
 nav.globalMenuSp.active{
-    width: 300px;
-    max-width: 100vw;
     pointer-events: all;
+    transform: translateX(0%);
 }
 .hideLayer{
     position: absolute;
@@ -179,4 +177,20 @@ nav.globalMenuSp.inactive .decosubtitle{
     margin-top: 10px;
     color: #686468;
     text-align: center;
+}
+
+@media screen and (min-width : 1024px){
+    .humburger{
+        display: none;
+    }
+    .title{
+        width: calc(100vw - 300px);
+        left: 300px;
+    }
+    .decotitle{
+        margin-top: 20px;
+    }
+    .title span{
+        margin-left: 40px;
+    }
 }

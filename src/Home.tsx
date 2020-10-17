@@ -16,13 +16,18 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
     root: {
-        width: '30vw',
+        width: '21vw',
         margin: '15px 15px',
-        ['@media (max-width:768px)']: {
-            width: '70vw',
+        height: 'auto',
+        ['@media (max-width:1024px)']: {
+            width: '50vw',
             margin: '10px 0px',
         },
-        ['@media (max-width:425px)']: {
+        ['@media (max-width:768px)']: {
+            width: '40vw',
+            margin: '10px 10px',
+        },
+        ['@media (max-width:550px)']: {
             width: '90vw',
             margin: '10px 0px',
         }
@@ -44,22 +49,23 @@ function Home() {
                 <div className="welcome">
                     <img src="/assets/thumbnail.webp" className="headerimage" alt="Header Image" />
                 </div>
-                <Paper elevation={1} className="news">
+                <Paper elevation={1} className="content-paper">
                     <div className="content-title">News</div>
                     <div className="news-article">
-                        <div className="article-date">2020/10/09</div>
+                        <div className="article-date">2020/10/12</div>
                         <div className="article-body">
-                            ダミー 1
+                            サイトを公開しました。
                         </div>
                     </div>
                     <div className="news-article">
-                        <div className="article-date">2020/10/10</div>
+                        <div className="article-date">2020/10/17</div>
                         <div className="article-body">
-                            ダミー 2
+                            <a className="link" href="/About">About</a> と
+                            <a className="link " href="/Story1">「パンデミックな彼女」紹介・上映ページ</a> を更新しました。
                         </div>
                     </div>
                 </Paper>
-                <Paper elevation={1} className="news">
+                <Paper elevation={1} className="content-paper">
                     <div className="content-title">Schedule</div>
                     <div className="news-article">
                         <div className="article-date">2020/10/30</div>
@@ -118,7 +124,7 @@ function Home() {
                                             15年越しの絆
                                     </Typography>
                                         <Typography variant="body2" color="textSecondary" component="p">
-                                            映画「15年越しの絆」の上映ページです。
+                                            映画「15年越しの絆」の紹介・上映ページです。
                                     </Typography>
                                     </CardContent>
                                 </CardActionArea>
@@ -144,7 +150,7 @@ function Home() {
                         </a>
                     </div>
                 </div>
-                <Paper elevation={1} className="links">
+                <Paper elevation={1} className="content-paper">
                     <div className="content-title">Links</div>
                     <div className="news-article">
                         <div className="article-body">

@@ -10,9 +10,9 @@ function TimeTable() {
     return (
         <div>
             <Header name="Time Table" />
-            <div className="about-content">
-                <Paper elevation={2} className="coming">
-                    <h1>Coming Soon!</h1>
+            <div className="timetable-content">
+                <Paper elevation={2} className="content-paper explain">
+                    <div className="content-title">Coming soon!</div>
                 </Paper>
             </div>
             <Footer />
