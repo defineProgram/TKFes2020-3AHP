@@ -99,7 +99,7 @@ function Home() {
                                     />
                                     <CardContent>
                                         <Typography gutterBottom variant="h5" component="h2">
-                                            パンデミックな彼女
+                                            「パンデミックな彼女」
                                     </Typography>
                                         <Typography variant="body2" color="textSecondary" component="p">
                                             映画「パンデミックな彼女」の紹介・上映ページです。
@@ -117,7 +117,7 @@ function Home() {
                                     />
                                     <CardContent>
                                         <Typography gutterBottom variant="h5" component="h2">
-                                            15年越しの絆
+                                            「15年越しの絆」
                                     </Typography>
                                         <Typography variant="body2" color="textSecondary" component="p">
                                             映画「15年越しの絆」の紹介・上映ページです。

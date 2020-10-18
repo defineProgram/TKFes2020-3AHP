@@ -39,11 +39,10 @@ a {
     z-index: 100000;
     background: #4518c0;
     opacity: 1;
-    animation: animation .4s ease-in-out;
     pointer-events: none;
 }
 .loading.inactive{
-    opacity: 0;
+    animation: animation .3s ease-in-out forwards;
 }
 
 @keyframes animation{

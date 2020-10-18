@@ -10,8 +10,15 @@ import TimeTable from './TimeTable'
 
 function App() {
   const [isLoaded,setisLoaded]=useState(false);
-  useEffect(()=>{
+  const onLoad=(()=>{
+    console.log("Load complete!");
     setisLoaded(true);
+  });
+  useEffect(()=>{
+    window.addEventListener("load",onLoad);
+    return (): void => {
+      window.removeEventListener("load",onLoad);
+		}
   });
   return (
     <div className="App">

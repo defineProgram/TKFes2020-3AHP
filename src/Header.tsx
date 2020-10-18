@@ -34,6 +34,7 @@ function Header(props: Props) {
 	});
 	const onKeyDown = (() => { if (isOpen && window.innerWidth < 1024) setisOpen(false) });
 	useEffect(() => {
+		document.title=props.name+" | 3年A組 ー今から皆さんは観客ですー"
 		document.addEventListener("scroll", onScroll);
 		document.addEventListener("click", onKeyDown);
 		window.addEventListener("resize", onResize);
