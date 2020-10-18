@@ -15,7 +15,7 @@ header.hidden{
 .title{
     font-family: 'Roboto', sans-serif;
     color: #fff;
-    font-size: 1.3em;
+    font-size: 1.5em;
     padding-top: 20px;
     text-align: left;
     position: fixed;
@@ -24,10 +24,18 @@ header.hidden{
     background: #4518c0de;
     box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12);
 }
+
 .title span{
     margin-left: 70px;
 }
-
+@media screen and (max-width : 350px){
+    .title{
+        font-size: 1.3em;
+    }
+    .title span{
+        margin-left: 60px;
+    }
+}
 .humburger{
     display: block;
     position: fixed;
@@ -128,6 +136,13 @@ nav.globalMenuSp ul li a {
     color: #000;
     padding: 1em 0;
     text-decoration: none;
+    transition: .4s all;
+}
+nav.globalMenuSp ul li:hover a{
+    color: #4518c0;
+}
+nav.globalMenuSp ul li a.now{
+    color: #4518c0;
 }
 nav.globalMenuSp.active{
     pointer-events: all;
@@ -193,4 +208,9 @@ nav.globalMenuSp.inactive .decosubtitle{
     .title span{
         margin-left: 40px;
     }
+}
+
+.ext-link{
+    width: .7em;
+    height: .7em;
 }

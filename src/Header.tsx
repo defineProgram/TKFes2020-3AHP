@@ -44,6 +44,10 @@ function Header(props: Props) {
 			window.removeEventListener("resize", onResize);
 		}
 	});
+	const urllist=[['Home','/'],['About','/About'],['「パンデミックな彼女」','/Story1'],['「15年越しの絆」','/Story2'],['Time Table','/TimeTable']];
+	const listItems = urllist.map((name) =>
+  		<li><a href={name[1]} className={name[0]==props.name?"now":""}>{name[0]}</a></li>
+	);
 	return (
 		<header className={(isHidden ? "hidden" : "tapu")}>
 			<div className={"hideLayer " + (window.innerWidth < 1024 && isOpen ? "active" : "inactive")} />
@@ -57,11 +61,8 @@ function Header(props: Props) {
 				<div className="decotitle">筑駒文化祭2020 3AHR</div>
 				<div className="decosubtitle">ー今から皆さんは観客ですー</div>
 				<ul>
-					<li><a href="/">Home</a></li>
-					<li><a href="/About">About</a></li>
-					<li><a href="/Story1">「パンデミックな彼女」</a></li>
-					<li><a href="/Story2">「15年越しの絆」</a></li>
-					<li><a href="/TimeTable">Time Table</a></li>
+					{listItems}
+					<li><a href="https://twitter.com/3A2020_official" target="_blank">Twitter <img src="assets/link.svg" className="ext-link" /></a></li>
 				</ul>
 			</nav>
 			<div className="title"><span>{props.name}</span>
