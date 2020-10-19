@@ -30,8 +30,3 @@ a {
 .link:hover::after {
     width: 100%;
 }
-
-.App.leave{
-    transform: translateY(-50px);
-    transition: .5s ease-in-out;
-}

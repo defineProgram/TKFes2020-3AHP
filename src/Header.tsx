@@ -47,7 +47,7 @@ function Header(props: Props) {
 	});
 	const urllist=[['Home','/'],['About','/About'],['「パンデミックな彼女」','/Story1'],['「15年越しの絆」','/Story2'],['Time Table','/TimeTable']];
 	const listItems = urllist.map((name) =>
-  		<li><Link to={name[1]} className={name[0]==props.name?"now":""}>{name[0]}</Link></li>
+  		<li key={name[0]}><a href={name[1]} className={name[0]==props.name?"now":""}>{name[0]}</a></li>
 	);
 	return (
 		<header className={(isHidden ? "hidden" : "tapu")}>
@@ -63,7 +63,7 @@ function Header(props: Props) {
 				<div className="decosubtitle">ー今から皆さんは観客ですー</div>
 				<ul>
 					{listItems}
-					<li><a href="https://twitter.com/3A2020_official" target="_blank">Twitter <img src="assets/link.svg" className="ext-link" /></a></li>
+					<li><a href="https://twitter.com/3A2020_official" target="_blank" rel="noopener">Twitter <img src="assets/link.svg" className="ext-link" /></a></li>
 				</ul>
 			</nav>
 			<div className="title"><span>{props.name}</span>

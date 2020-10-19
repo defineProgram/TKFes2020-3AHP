@@ -9,9 +9,8 @@
     pointer-events: none;
 }
 .loading.inactive{
-    animation: animation .4s ease-in-out forwards;
+    animation: animation .6s ease-in-out forwards;
 }
-
 @keyframes animation{
     0%{
         opacity: 1;

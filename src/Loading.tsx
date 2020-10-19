@@ -1,15 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
 import './Loading.css';
 
 export default function Loading() {
-  const { pathname } = useLocation();
   const [isLoaded, setisLoaded] = useState(false);
   const onLoad = (() => {
-    setisLoaded(false);
-    setTimeout(() => {
-      setisLoaded(true);
-    }, 100);
+    setisLoaded(true);
   });
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -21,7 +16,7 @@ export default function Loading() {
         window.removeEventListener("load", onLoad);
       }
     }
-  }, [pathname]);
+  });
 
   return (
     <div className={"loading" + (isLoaded ? " inactive" : " active")}>

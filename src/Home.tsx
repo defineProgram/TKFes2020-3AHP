@@ -72,7 +72,7 @@ function Home() {
                 </Paper>
                 <div className="contents">
                     <div className="content-articles">
-                        <Link to="/About">
+                        <a href="/About">
                             <Card className={classes.root}>
                                 <CardActionArea>
                                     <CardMedia
@@ -89,8 +89,8 @@ function Home() {
                                     </CardContent>
                                 </CardActionArea>
                             </Card>
-                        </Link>
-                        <Link to="/Story1">
+                        </a>
+                        <a href="/Story1">
                             <Card className={classes.root}>
                                 <CardActionArea>
                                     <CardMedia
@@ -107,8 +107,8 @@ function Home() {
                                     </CardContent>
                                 </CardActionArea>
                             </Card>
-                        </Link>
-                        <Link to="/Story2">
+                        </a>
+                        <a href="/Story2">
                             <Card className={classes.root}>
                                 <CardActionArea>
                                     <CardMedia
@@ -125,8 +125,8 @@ function Home() {
                                     </CardContent>
                                 </CardActionArea>
                             </Card>
-                        </Link>
-                        <Link to="/TimeTable">
+                        </a>
+                        <a href="/TimeTable">
                             <Card className={classes.root}>
                                 <CardActionArea>
                                     <CardMedia
@@ -143,19 +143,19 @@ function Home() {
                                     </CardContent>
                                 </CardActionArea>
                             </Card>
-                        </Link>
+                        </a>
                     </div>
                 </div>
                 <Paper elevation={1} className="content-paper">
                     <div className="content-title">Links</div>
                     <div className="news-article">
                         <div className="article-body">
-                            <a className="link" href="https://tsukukoma.bunkasai.info/" target="_blank">筑駒文化祭公式サイト <img src="assets/link.svg" className="ext-link" /></a>
+                            <a className="link" href="https://tsukukoma.bunkasai.info/" target="_blank" rel="noopener">筑駒文化祭公式サイト <img src="assets/link.svg" className="ext-link" /></a>
                         </div>
                     </div>
                     <div className="news-article">
                         <div className="article-body">
-                            <a className="link" href="https://twitter.com/3A2020_official" target="_blank">筑駒 3A 公式Twitter <img src="assets/link.svg" className="ext-link" /></a>
+                            <a className="link" href="https://twitter.com/3A2020_official" target="_blank" rel="noopener">筑駒 3A 公式Twitter <img src="assets/link.svg" className="ext-link" /></a>
                         </div>
                     </div>
                 </Paper>
