@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom';
 import './Header.css'
 
 interface Props {
@@ -46,7 +47,7 @@ function Header(props: Props) {
 	});
 	const urllist=[['Home','/'],['About','/About'],['「パンデミックな彼女」','/Story1'],['「15年越しの絆」','/Story2'],['Time Table','/TimeTable']];
 	const listItems = urllist.map((name) =>
-  		<li><a href={name[1]} className={name[0]==props.name?"now":""}>{name[0]}</a></li>
+  		<li><Link to={name[1]} className={name[0]==props.name?"now":""}>{name[0]}</Link></li>
 	);
 	return (
 		<header className={(isHidden ? "hidden" : "tapu")}>

@@ -7,35 +7,13 @@ import About from './About'
 import Story1 from './Story1'
 import Story2 from './Story2'
 import TimeTable from './TimeTable'
+import Loading from './Loading'
 
 function App() {
-  const [isLoaded,setisLoaded]=useState(false);
-  const onLoad=(()=>{
-    setisLoaded(true);
-  });
-  useEffect(()=>{
-    if(document.readyState=="complete"){
-      setisLoaded(true);
-    }else {
-      window.addEventListener("load",onLoad);
-      return (): void => {
-        window.removeEventListener("load",onLoad);
-      }
-    }
-  });
   return (
     <div className="App">
-      <div className={"loading"+(isLoaded?" inactive":" active")}>
-        <div className="sk-chase">
-          <div className="sk-chase-dot"></div>
-          <div className="sk-chase-dot"></div>
-          <div className="sk-chase-dot"></div>
-          <div className="sk-chase-dot"></div>
-          <div className="sk-chase-dot"></div>
-          <div className="sk-chase-dot"></div>
-        </div>
-      </div>
       <Router>
+        <Loading />
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/About' component={About} />

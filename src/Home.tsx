@@ -56,8 +56,8 @@ function Home() {
                     <div className="news-article">
                         <div className="article-date">2020/10/17</div>
                         <div className="article-body">
-                            <a className="link" href="/About">About</a> と
-                            <a className="link " href="/Story1">「パンデミックな彼女」紹介・上映ページ</a> を更新しました。
+                            <Link className="link" to="/About">About</Link> と
+                            <Link className="link " to="/Story1">「パンデミックな彼女」紹介・上映ページ</Link> を更新しました。
                         </div>
                     </div>
                 </Paper>
@@ -72,7 +72,7 @@ function Home() {
                 </Paper>
                 <div className="contents">
                     <div className="content-articles">
-                        <a href="/About">
+                        <Link to="/About">
                             <Card className={classes.root}>
                                 <CardActionArea>
                                     <CardMedia
@@ -89,8 +89,8 @@ function Home() {
                                     </CardContent>
                                 </CardActionArea>
                             </Card>
-                        </a>
-                        <a href="/Story1">
+                        </Link>
+                        <Link to="/Story1">
                             <Card className={classes.root}>
                                 <CardActionArea>
                                     <CardMedia
@@ -107,8 +107,8 @@ function Home() {
                                     </CardContent>
                                 </CardActionArea>
                             </Card>
-                        </a>
-                        <a href="/Story2">
+                        </Link>
+                        <Link to="/Story2">
                             <Card className={classes.root}>
                                 <CardActionArea>
                                     <CardMedia
@@ -125,8 +125,8 @@ function Home() {
                                     </CardContent>
                                 </CardActionArea>
                             </Card>
-                        </a>
-                        <a href="/TimeTable">
+                        </Link>
+                        <Link to="/TimeTable">
                             <Card className={classes.root}>
                                 <CardActionArea>
                                     <CardMedia
@@ -143,19 +143,19 @@ function Home() {
                                     </CardContent>
                                 </CardActionArea>
                             </Card>
-                        </a>
+                        </Link>
                     </div>
                 </div>
                 <Paper elevation={1} className="content-paper">
                     <div className="content-title">Links</div>
                     <div className="news-article">
                         <div className="article-body">
-                            <a className="link" href="https://tsukukoma.bunkasai.info/">筑駒文化祭公式サイト</a>
+                            <a className="link" href="https://tsukukoma.bunkasai.info/" target="_blank">筑駒文化祭公式サイト <img src="assets/link.svg" className="ext-link" /></a>
                         </div>
                     </div>
                     <div className="news-article">
                         <div className="article-body">
-                            <a className="link" href="https://twitter.com/3A2020_official">筑駒 3A 公式Twitter</a>
+                            <a className="link" href="https://twitter.com/3A2020_official" target="_blank">筑駒 3A 公式Twitter <img src="assets/link.svg" className="ext-link" /></a>
                         </div>
                     </div>
                 </Paper>
