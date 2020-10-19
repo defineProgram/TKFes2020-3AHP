@@ -42,15 +42,18 @@ a {
     pointer-events: none;
 }
 .loading.inactive{
-    animation: animation .3s ease-in-out forwards;
+    animation: animation .5s ease-in-out forwards;
 }
 
 @keyframes animation{
-    0%,60%{
+    0%{
         opacity: 1;
     }
+    50%{
+        opacity: .4;
+    }
     80%{
-        opacity: .3;
+        opacity: .1;
     }
     100%{
         opacity: 0;
