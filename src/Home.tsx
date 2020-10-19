@@ -56,8 +56,8 @@ function Home() {
                     <div className="news-article">
                         <div className="article-date">2020/10/17</div>
                         <div className="article-body">
-                            <Link className="link" to="/About">About</Link> と
-                            <Link className="link " to="/Story1">「パンデミックな彼女」紹介・上映ページ</Link> を更新しました。
+                            <a className="link" href="/About">About</a> と
+                            <a className="link " href="/Story1">「パンデミックな彼女」紹介・上映ページ</a> を更新しました。
                         </div>
                     </div>
                 </Paper>
