@@ -8,7 +8,7 @@ export default function Loading() {
   });
   useEffect(() => {
     window.scrollTo(0, 0);
-    if (document.readyState == "complete") {
+    if (document.readyState === "complete") {
       onLoad();
     } else {
       window.addEventListener("load", onLoad);

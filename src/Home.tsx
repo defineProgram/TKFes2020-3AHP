@@ -2,15 +2,12 @@ import React from 'react'
 import './Home.css'
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Header from './Header'
 import Footer from './Footer'
 import { Paper } from '@material-ui/core';
-import { Link } from 'react-router-dom';
 
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -57,7 +54,14 @@ function Home() {
                         <div className="article-date">2020/10/17</div>
                         <div className="article-body">
                             <a className="link" href="/About">About</a> と
-                            <a className="link " href="/Story1">「パンデミックな彼女」紹介・上映ページ</a> を更新しました。
+                            <a className="link " href="/Story1">「パンデミックな彼女」</a> を更新しました。
+                        </div>
+                    </div>
+                    <div className="news-article">
+                        <div className="article-date">2020/10/24</div>
+                        <div className="article-body">
+                            <a className="link" href="/Story2">「15年越しの絆」</a> と
+                            <a className="link" href="/TimeTable">Time Table</a> を更新しました。
                         </div>
                     </div>
                 </Paper>
