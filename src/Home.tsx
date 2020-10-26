@@ -61,7 +61,7 @@ function Home() {
                         <div className="article-date">2020/10/24</div>
                         <div className="article-body">
                             <a className="link" href="/Story2">「15年越しの絆」</a> と
-                            <a className="link" href="/TimeTable">Time Table</a> を更新しました。
+                            <a className="link" href="/TimeTable">タイムテーブル（内部）</a> を更新しました。
                         </div>
                     </div>
                 </Paper>

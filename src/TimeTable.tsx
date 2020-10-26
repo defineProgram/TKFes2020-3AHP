@@ -14,12 +14,18 @@ import Paper from '@material-ui/core/Paper'
 
 const useStyles = makeStyles({
     root: {
-        margin: '30px auto',
+        margin: '30px 0px',
         width: '100%',
+        background : '#e8e8e8',
     },
     table: {
         minWidth: 400,
     },
+    cell: {
+        "&:nth-child(2n+1)": {
+            background: '#ffffff',
+        }
+    }
 });
 
 function createData(startTime: string, title: string, endTime: string) {
@@ -55,98 +61,96 @@ function p(s: string) {
 }
 const now = new Date();
 const st = p(String(now.getMonth() + 1)) + "/" + p(String(now.getDate())) + " " + p(String(now.getHours())) + ":" + p(String(now.getMinutes()));
-const running = rows.map((row) => (
-    (row.startTime <= st && st < row.endTime ?
-        <TableRow key={row.startTime}>
-            <TableCell component="th" scope="row">{row.startTime}</TableCell>
-            <TableCell align="left">{row.title}</TableCell>
-            <TableCell align="left">{row.endTime}</TableCell>
-        </TableRow>
-        : null)
-))
-const pending = rows.map((row) => (
-    (st < row.startTime ?
-        <TableRow key={row.startTime}>
-            <TableCell component="th" scope="row">{row.startTime}</TableCell>
-            <TableCell align="left">{row.title}</TableCell>
-            <TableCell align="left">{row.endTime}</TableCell>
-        </TableRow>
-        : null)
-))
-const finished = rows.map((row) => (
-    (row.endTime <= st ?
-        <TableRow key={row.startTime}>
-            <TableCell component="th" scope="row">{row.startTime}</TableCell>
-            <TableCell align="left">{row.title}</TableCell>
-            <TableCell align="left">{row.endTime}</TableCell>
-        </TableRow>
-        : null)
-))
 function TimeTable() {
     const classes = useStyles();
+    const running = rows.map((row) => (
+        (row.startTime <= st && st < row.endTime ?
+            <TableRow key={row.startTime} className={classes.cell}>
+                <TableCell component="th" scope="row">{row.startTime}</TableCell>
+                <TableCell align="left">{row.title}</TableCell>
+                <TableCell align="left">{row.endTime}</TableCell>
+            </TableRow>
+            : null)
+    ))
+    const pending = rows.map((row) => (
+        (st < row.startTime ?
+            <TableRow key={row.startTime} className={classes.cell}>
+                <TableCell component="th" scope="row">{row.startTime}</TableCell>
+                <TableCell align="left">{row.title}</TableCell>
+                <TableCell align="left">{row.endTime}</TableCell>
+            </TableRow>
+            : null)
+    ))
+    const finished = rows.map((row) => (
+        (row.endTime <= st ?
+            <TableRow key={row.startTime} className={classes.cell}>
+                <TableCell component="th" scope="row">{row.startTime}</TableCell>
+                <TableCell align="left">{row.title}</TableCell>
+                <TableCell align="left">{row.endTime}</TableCell>
+            </TableRow>
+            : null)
+    ))
     return (
         <div>
-            <Header name="Time Table" />
+            <Header name="タイムテーブル（内部）" />
             <div className="timetable-content">
-                <div className="nakami">
-                    {running.every(val => val === null) === false ? (
-                        <div>
-                            <div className="table-title">上映中</div>
-                            <TableContainer component={Paper} className={classes.root}>
-                                <Table className={classes.table} alia-label="simple table">
-                                    <TableHead>
-                                        <TableRow>
-                                            <TableCell>開始時刻</TableCell>
-                                            <TableCell align="left">題名</TableCell>
-                                            <TableCell align="left">終了時刻</TableCell>
-                                        </TableRow>
-                                    </TableHead>
-                                    <TableBody>
-                                        {running}
-                                    </TableBody>
-                                </Table>
-                            </TableContainer>
-                        </div>
-                    ) : null}
-                    {pending.every(val => val === null) === false ? (
-                        <div>
-                            <div className="table-title">上映予定</div>
-                            <TableContainer component={Paper} className={classes.root}>
-                                <Table className={classes.table} alia-label="simple table">
-                                    <TableHead>
-                                        <TableRow>
-                                            <TableCell>開始時刻</TableCell>
-                                            <TableCell align="left">題名</TableCell>
-                                            <TableCell align="left">終了時刻</TableCell>
-                                        </TableRow>
-                                    </TableHead>
-                                    <TableBody>
-                                        {pending}
-                                    </TableBody>
-                                </Table>
-                            </TableContainer>
-                        </div>
-                    ) : null}
-                    {finished.every(val => val === null) === false ? (
-                        <div>
-                            <div className="table-title">上映終了</div>
-                            <TableContainer component={Paper} className={classes.root}>
-                                <Table className={classes.table} alia-label="simple table">
-                                    <TableHead>
-                                        <TableRow>
-                                            <TableCell>開始時刻</TableCell>
-                                            <TableCell align="left">題名</TableCell>
-                                            <TableCell align="left">終了時刻</TableCell>
-                                        </TableRow>
-                                    </TableHead>
-                                    <TableBody>
-                                        {finished}
-                                    </TableBody>
-                                </Table>
-                            </TableContainer>
-                        </div>
-                    ) : null}
-                </div>
+                {running.every(val => val === null) === false ? (
+                    <Paper elevation={1} className="content-paper">
+                        <div className="content-title">上映中</div>
+                        <TableContainer component={Paper} className={classes.root}>
+                            <Table className={classes.table} alia-label="simple table">
+                                <TableHead>
+                                    <TableRow>
+                                        <TableCell>開始時刻</TableCell>
+                                        <TableCell align="left">題名</TableCell>
+                                        <TableCell align="left">終了時刻</TableCell>
+                                    </TableRow>
+                                </TableHead>
+                                <TableBody>
+                                    {running}
+                                </TableBody>
+                            </Table>
+                        </TableContainer>
+                    </Paper>
+                ) : null}
+                {pending.every(val => val === null) === false ? (
+                    <Paper elevation={1} className="content-paper">
+                        <div className="content-title">上映予定</div>
+                        <TableContainer component={Paper} className={classes.root}>
+                            <Table className={classes.table} alia-label="simple table">
+                                <TableHead>
+                                    <TableRow>
+                                        <TableCell>開始時刻</TableCell>
+                                        <TableCell align="left">題名</TableCell>
+                                        <TableCell align="left">終了時刻</TableCell>
+                                    </TableRow>
+                                </TableHead>
+                                <TableBody>
+                                    {pending}
+                                </TableBody>
+                            </Table>
+                        </TableContainer>
+                    </Paper>
+                ) : null}
+                {finished.every(val => val === null) === false ? (
+                    <Paper elevation={1} className="content-paper">
+                        <div className="table-title">上映終了</div>
+                        <TableContainer component={Paper} className={classes.root}>
+                            <Table className={classes.table} alia-label="simple table">
+                                <TableHead>
+                                    <TableRow>
+                                        <TableCell>開始時刻</TableCell>
+                                        <TableCell align="left">題名</TableCell>
+                                        <TableCell align="left">終了時刻</TableCell>
+                                    </TableRow>
+                                </TableHead>
+                                <TableBody>
+                                    {finished}
+                                </TableBody>
+                            </Table>
+                        </TableContainer>
+                    </Paper>
+                ) : null}
             </div>
             <Footer />
         </div>

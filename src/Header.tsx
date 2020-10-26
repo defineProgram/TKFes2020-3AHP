@@ -44,7 +44,7 @@ function Header(props: Props) {
 			window.removeEventListener("resize", onResize);
 		}
 	});
-	const urllist=[['Home','/'],['About','/About'],['「パンデミックな彼女」','/Story1'],['「15年越しの絆」','/Story2'],['Time Table','/TimeTable']];
+	const urllist=[['Home','/'],['About','/About'],['「パンデミックな彼女」','/Story1'],['「15年越しの絆」','/Story2'],['タイムテーブル（内部）','/TimeTable']];
 	const listItems = urllist.map((name) =>
   		<li key={name[0]}><a href={name[1]} className={name[0]===props.name?"now":""}>{name[0]}</a></li>
 	);
