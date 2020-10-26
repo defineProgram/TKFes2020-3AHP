@@ -9,7 +9,7 @@
     pointer-events: none;
 }
 .loading.inactive{
-    animation: animation 1s ease-in-out forwards;
+    animation: animation .7s ease-in-out forwards;
 }
 @keyframes animation{
     0%{
