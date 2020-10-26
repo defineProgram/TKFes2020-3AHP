@@ -4,12 +4,12 @@
     height: 100vh;
     padding-top: 45vh;
     z-index: 100000;
-    background: #4518c0;
+    background: #e8e8e8;
     opacity: 1;
     pointer-events: none;
 }
 .loading.inactive{
-    animation: animation .5s ease-in-out forwards;
+    animation: animation 1s ease-in-out forwards;
 }
 @keyframes animation{
     0%{
@@ -41,7 +41,7 @@
     display: block;
     width: 25%;
     height: 25%;
-    background-color: #fff;
+    background-color: #4518c0;
     border-radius: 100%;
     animation: sk-chase-dot-before 2.0s infinite ease-in-out both;
 }
