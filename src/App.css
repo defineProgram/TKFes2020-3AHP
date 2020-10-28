@@ -4,6 +4,9 @@ body {
     position: relative;
 }
 
+.App{
+    overflow: hidden;
+}
 a {
     text-decoration: none;
 }
