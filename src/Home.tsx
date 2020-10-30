@@ -64,6 +64,12 @@ function Home() {
                             <a className="link" href="/TimeTable">タイムテーブル（内部）</a> を更新しました。
                         </div>
                     </div>
+                    <div className="news-article">
+                        <div className="article-date">2020/10/30</div>
+                        <div className="article-body">
+                            映画を公開しました。
+                        </div>
+                    </div>
                 </Paper>
                 <Paper elevation={1} className="content-paper">
                     <div className="content-title">Schedule</div>
