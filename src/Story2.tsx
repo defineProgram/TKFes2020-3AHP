@@ -7,10 +7,16 @@ import Footer from './Footer'
 import { Paper } from '@material-ui/core';
 
 function Story2() {
+    const youtube = '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/huq5vNnU-BM?list=PLuRgHMVjyJuvVU6H2MIPw-PrVmndAOoSf" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
     return (
         <div>
             <Header name="「15年越しの絆」" />
             <div className="story2-content">
+                <Paper elevation={2} className="content-paper explain">
+                    <div id="wrapper">
+                        <div id="story-contents" dangerouslySetInnerHTML={{ __html: youtube }} />
+                    </div>
+                </Paper>
                 <Paper elevation={2} className="content-paper explain">
                     <div className="content-title">あらすじ</div>
                     <div className="explain-contents">
@@ -21,7 +27,6 @@ function Story2() {
                     どうやら移動するようだ。着いたらそこはとあるアパートで、彼はそこを「拠点」と呼んでいるらしい。子供たちは渋るが、彼はこう言った。<br /><br />
                     「安心して、『他に』変な人が来ても、指一本触れさせやしないから。」<br /><br />
                     そして、男は昔話、それも20年ほど前、とある学校がまだあった頃の話を語り出すのであった。<br /><br />
-                    <b>なお、映画公開は10/30を予定しております。公開まで暫くお待ち下さい。</b>
                     </div>
                 </Paper>
                 <Paper elevation={2} className="content-paper explain">
